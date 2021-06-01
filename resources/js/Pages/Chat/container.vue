@@ -9,7 +9,8 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    Container
+                    <message-container />
+                    <input-message />
                 </div>
             </div>
         </div>
@@ -18,10 +19,39 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
+    import MessageContainer from "@/Pages/Chat/messageContainer";
+    import InputMessage from "@/Pages/Chat/inputMessage";
 
     export default {
         components: {
             AppLayout,
+            MessageContainer,
+            InputMessage,
         },
+        data: function() {
+            return {
+                chatRooms: [],
+                currentRoom: [],
+                messages: [],
+            };
+        },
+        methods: {
+            getRooms() {
+                axios.get('/chat/rooms')
+                    .then(response => {
+                        this.chatRooms = response.data;
+                        this.setRoom(response.data[0]);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            },
+            setRoom(room) {
+                this.currentRoom = room;
+            }
+        },
+        created() {
+            this.getRooms();
+        }
     }
 </script>
