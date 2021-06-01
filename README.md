@@ -14,3 +14,4 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 ### Commands that used to create the project:
 
 - composer create-project --prefer-dist laravel/laravel chatapp
+- composer require laravel/sanctum
