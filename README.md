@@ -15,3 +15,4 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 
 - composer create-project --prefer-dist laravel/laravel chatapp
 - composer require laravel/sanctum
+- php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
