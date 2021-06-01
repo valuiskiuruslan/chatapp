@@ -26,3 +26,4 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - php artisan migrate
 - php artisan make:seeder ChatRoomSeeder
 - php artisan db:seed
+- php artisan make:controller ChatController
