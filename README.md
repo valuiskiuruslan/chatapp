@@ -21,3 +21,6 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - php artisan migrate
 - php artisan vendor:publish --tag=jetstream-views
 - php artisan serve
+- php artisan make:model ChatRoom -m
+- php artisan make:model ChatMessage -m
+- php artisan migrate
