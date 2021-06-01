@@ -4,7 +4,8 @@
 
 <script>
     export default {
-        name: "inputMessage"
+        name: "inputMessage",
+        props: ['room']
     }
 </script>
 
