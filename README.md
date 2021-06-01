@@ -24,3 +24,5 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - php artisan make:model ChatRoom -m
 - php artisan make:model ChatMessage -m
 - php artisan migrate
+- php artisan make:seeder ChatRoomSeeder
+- php artisan db:seed
