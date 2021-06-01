@@ -19,3 +19,5 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - composer require laravel/jetstream
 - php artisan jetstream:install inertia
 - php artisan migrate
+- php artisan vendor:publish --tag=jetstream-views
+- php artisan serve
