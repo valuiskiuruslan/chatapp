@@ -16,10 +16,10 @@ class ChatMessage extends Model
     use HasFactory;
 
     public function room() {
-        $this->hasOne(ChatRoom::class, 'id', 'chat_room_id');
+        return $this->hasOne(ChatRoom::class, 'chat_room_id', 'id');
     }
 
     public function user() {
-        $this->hasOne(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }
