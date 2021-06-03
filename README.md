@@ -27,3 +27,5 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - php artisan make:seeder ChatRoomSeeder
 - php artisan db:seed
 - php artisan make:controller ChatController
+- composer require pusher/pusher-php-server "~4.0"
+- npm install --save laravel-echo pusher-js
