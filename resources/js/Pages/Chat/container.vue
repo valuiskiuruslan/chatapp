@@ -48,7 +48,10 @@
             };
         },
         watch: {
-            currentRoom() {
+            currentRoom(val, oldVal) {
+                if (oldVal.id) {
+                    this.disconnect(oldVal);
+                }
                 this.connect();
             }
         },
@@ -60,8 +63,11 @@
                     window.Echo.private("chat." + this.currentRoom.id)
                         .listen('.message.new', e => {
                             vm.getMessages();
-                        })
+                        });
                 }
+            },
+            disconnect(room) {
+                window.Echo.leave("chat." + room.id);
             },
             getRooms() {
                 axios.get('/chat/rooms')

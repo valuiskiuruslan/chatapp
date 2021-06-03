@@ -30,3 +30,5 @@ Source: https://www.youtube.com/watch?v=CkRGJC0ytdU
 - composer require pusher/pusher-php-server "~4.0"
 - npm install --save laravel-echo pusher-js
 - php artisan event:generate
+- npm remove pusher-js
+- npm install --save pusher-js@6.0.3
